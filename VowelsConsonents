@@ -1,0 +1,24 @@
+def is_vowel(char):
+    return char.lower() in 'aeiou'
+
+def analyze_string(input_string):
+    vowels = []
+    consonants = []
+
+    for char in input_string:
+        if char.isalpha():
+            if is_vowel(char):
+                vowels.append(char)
+            else:
+                consonants.append(char)
+
+    print("\nVowels:", ' '.join(vowels))
+    print("Number of vowels:", len(vowels))
+
+    print("\nConsonants:", ' '.join(consonants))
+    print("Number of consonants:", len(consonants))
+
+
+if __name__ == "__main__":
+    user_input = input("Enter a string: ")
+    analyze_string(user_input)
